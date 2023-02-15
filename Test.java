@@ -22,11 +22,9 @@ public class Test
 	    check.enter(new Candy("Jolly Ranchers", 309, 3.22));
 	    check.enter(new IceCream("Strawberry Ice Cream", 140));
 	    check.enter(new Candy("Twizzlers", 240, 1.00));
-	    check.enter(new Sundae("Caramel Fudge Sundae", "Choc. Ice Cream", 140, 90));
-	   
+	    check.enter(new Sundae("Caramel Fudge Sundae", "Choc. Ice Cream", 140, 90));   
 	    	    
 	    System.out.println(check);
-	    
 	    check.clearAll();
 	}
 }
