@@ -1,24 +1,25 @@
 public class Sundae extends IceCream
 {
-	private String nameOfTopping;
-	private int priceTopping;		
-	private int price;
+	private int priceTopping; // price for desired topping		
+	private String nameTopping; // name for desired topping		
+	private int price; // total price, in cents
 	
-	public Sundae(String iceCreamName, int iceCreamPrice, String tn, int tp) 
+	public Sundae(String iceCreamName, String toppingName, int iceCreamPrice, int toppingPrice) 
 	{
+		// sets the IceCream name, price, and topping price
 		super(iceCreamName, iceCreamPrice);
-		nameOfTopping = tn;
-		priceTopping = tp;		
+		nameTopping = toppingName;
+		priceTopping = toppingPrice;		
 	}
 	
-	public int getPrice() 
+	public String getTopName()
 	{
+		return nameTopping;
+	}
+	
+	public int getPrice(){
+		// returns the total price of the Sundae item
 		price = priceTopping + super.getPrice();
 		return price;
-	}
-	
-	public String getTopping() 
-	{
-		return nameOfTopping;
 	}
 }
