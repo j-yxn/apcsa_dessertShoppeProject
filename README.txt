@@ -2,6 +2,6 @@
 README.txt
 --------------------------------------------------------------
 PROJECT TITLE: Dessert Shoppe
-VERSION or DATE: v1 ,(2/10/2023)
+VERSION or DATE: v2, (2/15/2023)
 AUTHORS: Daniel Yoon, APCSA23
 --------------------------------------------------------------
