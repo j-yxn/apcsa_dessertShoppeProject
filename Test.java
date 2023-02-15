@@ -10,21 +10,20 @@ public class Test
 	     * 
 	     * (All prices listed in cents)
 	     * 
-	     * Candy(String name, double weight, int pricePerPound)
+	     * Candy(String name, int pricePerPound, double weight)
 	     * 
-	     * Cookie(String name, int amount, int pricePerDozen)
+	     * Cookie(String name, int pricePerDozen, int amount)
 	     * 
 	     * IceCream(String name, int price)
 	     * 
-	     * Sundae(String IceCream name, int IceCream price, String Topping name, int Topping cost)
+	     * Sundae(String IceCream name, String Topping name, int IceCream price, int Topping price)
 	    */
 	    
-	    check.enter(new Candy("Jolly Ranchers", 3.22, 309));
+	    check.enter(new Candy("Jolly Ranchers", 309, 3.22));
 	    check.enter(new IceCream("Strawberry Ice Cream", 140));
-	    check.enter(new Candy("Twizzlers", 1.00, 240));
-	    check.enter(new Sundae("Vanilla Bean", 140, "Gummy Worms", 90));
-	    check.enter(new Cookie("Chocolate Chip Cookie", 5, 1299));
-	    check.enter(new Cookie("Raisin Cookie", 2, 1299));
+	    check.enter(new Candy("Twizzlers", 240, 1.00));
+	    check.enter(new Sundae("Caramel Fudge Sundae", "Choc. Ice Cream", 140, 90));
+	   
 	    	    
 	    System.out.println(check);
 	    
