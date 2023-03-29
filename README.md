@@ -39,63 +39,6 @@ derived. The DessertItem class should have the following:
   <li>Sundae class – A sundae item is a child of the IceCream class. The cost of a sundae is the
 cost of an IceCream item plus the cost of the topping.</li>
 </ol>
-<details>
-  <summary><h3>Dessert Shoppe Project Rubric 📚</h3></summary>
-    <table>
-      <tr>
-        <th colspan="2">Scanner Basics</th>
-      </tr>
-      <tr>
-        <td>1) Import is correct</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <th colspan="2"><b>Part I: Statistics Program</th>
-      </tr>
-      <tr>
-        <td>1) Prompts user for input</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <td>2) Correctly accepts user input for number of values</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <td>3) Loops to accept the appropriate number of values based on criteria #2</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <td>4) Prompts user for input values and correctly accepts those values</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <td>5) Uses input to correctly calculate sums</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <td>6) Uses input to correctly calculate average</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <th colspan="2"><b>Part II: Star Wars Name Program</th>
-      </tr>
-      <tr>
-        <td>1) Prompts user for input</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <td>2) Correctly accepts user input for number of values</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <td>3) Determines the user’s Star Wars name given the formula</td>
-        <td>_____ / 1</td>
-      </tr>
-      <tr>
-        <th colspan="2"> </th>
-      </tr>
-    </table>
-</details>
 
 </body>
 </html>
