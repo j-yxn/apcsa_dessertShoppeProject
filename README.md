@@ -40,7 +40,7 @@ derived. The DessertItem class should have the following:
 cost of an IceCream item plus the cost of the topping.</li>
 </ol>
 <details>
-  <summary><h3>Scanner Project Rubric 📚</h3></summary>
+  <summary><h3>Dessert Shoppe Project Rubric 📚</h3></summary>
     <table>
       <tr>
         <th colspan="2">Scanner Basics</th>
