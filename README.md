@@ -25,23 +25,20 @@ derived. The DessertItem class should have the following:
 
 <br>
 
-<p><b>Part II:</b> Rumor has it that George Lucas may use a “formula” to create all of those strange sounding
-names you see in the Star Wars movies (Jar Jar Binks, ObiWan, etc.)</p>
+<p><b>Part II:</b> Write the Derived (Child) Classes</p>
 
-<p>Write a program that allows users to see what their Star Wars name might be according to the
-suggested “formula”, follow the steps below.</p>
-
-<p>Prompt the user for the following information:</p>
+<pYou will write the code for four(4) child classes of DessertItem. These classes include the:</p>
 <ol type="1">
-  <li>First Name</li>
-  <li>Middle Name</li>
-  <li>Last Name</li>
-  <li>The Town of their Birth</li>
+  <li> Candy class – A candy item has a weight and a price per pound which are used to determine
+  its cost. For example, 2.30 lbs of fudge @ .89/lb = 205 cents. The cost should be rounded to
+  the nearest cent.</li>
+  <li>Cookie class – A cookie item has a number and a price per dozen which are used to
+  determine its cost. For example, 4 cookies @ 3.99/dozen = 133 cents. The cost should be
+  rounded to the nearest cent.</li>
+  <li>IceCream class – An ice cream item has a cost.</li>
+  <li>Sundae class – A sundae item is a child of the IceCream class. The cost of a sundae is the
+cost of an IceCream item plus the cost of the topping.</li>
 </ol>
-<p>Print their Star Wars Name using the following criteria:</p>
-  <p>Star Wars First Name = first three letters of last name + first 2 letters of first name</p>
-<p>Star Wars Last Name = first two letters of middle name + first three letters of town of birth</p>
-
 <details>
   <summary><h3>Scanner Project Rubric 📚</h3></summary>
     <table>
