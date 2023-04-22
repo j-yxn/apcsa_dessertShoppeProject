@@ -29,14 +29,14 @@ derived. The DessertItem class should have the following:
 
 <p>You will write the code for four(4) child classes of DessertItem. These classes include the:</p>
 <ol type="1">
-  <li> Candy class – A candy item has a weight and a price per pound which are used to determine
+  <li> Candy Class – A candy item has a weight and a price per pound which are used to determine
   its cost. For example, 2.30 lbs of fudge @ .89/lb = 205 cents. The cost should be rounded to
   the nearest cent.</li>
-  <li>Cookie class – A cookie item has a number and a price per dozen which are used to
+  <li>Cookie Class – A cookie item has a number and a price per dozen which are used to
   determine its cost. For example, 4 cookies @ 3.99/dozen = 133 cents. The cost should be
   rounded to the nearest cent.</li>
-  <li>IceCream class – An ice cream item has a cost.</li>
-  <li>Sundae class – A sundae item is a child of the IceCream class. The cost of a sundae is the
+  <li>IceCream Class – An ice cream item has a cost.</li>
+  <li>Sundae Class – A sundae item is a child of the IceCream class. The cost of a sundae is the
 cost of an IceCream item plus the cost of the topping.</li>
 </ol>
 
