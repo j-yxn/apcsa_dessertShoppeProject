@@ -1,29 +1,28 @@
 import java.util.*;
-public class Checkout 
-{
+public class Checkout {
 	private ArrayList<DessertItem> dessert = new ArrayList<DessertItem>(); // ArrayList of DessertItem, stores all the desserts desired
 	private int totalItems; // int variable of total items in dessert ArrayList
 	private String storeName = "Sweets Heaven"; // store name on receipt header
 	private int maxReceiptWidth = 30; // maximum spaces the receipt will print
 	
-	public Checkout(){
+	public Checkout() {
 		// sets the total amount of DessertItems to 0
 		totalItems = 0;
 	}
 	
-	public int numberOfItems(){
+	public int numberOfItems() {
 		// returns the number of items in the ArrayList currently
 		return totalItems;
 	}
 	
-	public void enter(DessertItem item){
+	public void enter(DessertItem item) {
 		// adds desired DessertItme into the dessert ArrayList
 		// adds 1 to the totalItems variable
 		dessert.add(totalItems, item);
 		totalItems++;
 	}
 	
-	public void clearAll(){
+	public void clearAll() {
 		// for loop to clear the whole dessert ArrayList
 		// sets the totalItems to 0
 		for(int i = 0; i < totalItems; i++)
@@ -31,7 +30,7 @@ public class Checkout
 		totalItems = 0;
 	}
 	
-	public int totalCost(){
+	public int totalCost() {
 		// for loop to calculate all the prices inside the dessert ArrayList
 		int sum = 0;
 		for(int i = 0; i < totalItems; i++)
@@ -40,13 +39,12 @@ public class Checkout
 		return sum;
 	}
 	
-	public int totalTax(){
+	public int totalTax() {
 		// returns the total tax rate (0.06 / 6%)
 		return (int)Math.round(this.totalCost() * 6.0 / 100.00); 
 	}
 	
-	public String centsConversion(int cents) 
-	{
+	public String centsConversion(int cents) {
 		// converts and returns the cent value to dollar value
 		String convert = "";			
 		int dollarAmount = cents / 100;
@@ -59,47 +57,35 @@ public class Checkout
 		return convert;
 	}
 	
-	public String dessertListing()
-	{
+	public String dessertListing() {
 		// returns the listing of DessertItem in dessert ArrayList
 		String str = ""; // logging
-		for(int i = 0; i < totalItems; i++)
-		{
+		for(int i = 0; i < totalItems; i++) {
 			String itemName = dessert.get(i).getName();	// items of every line
 			String itemPrice = centsConversion(dessert.get(i).getPrice());	// price of every item
 			
-			if (dessert.get(i) instanceof Candy) // if current DessertItem in ArrayList is Candy
-			{	
+			if (dessert.get(i) instanceof Candy) {	// if current DessertItem in ArrayList is Candy 	
 				double getLb = ((Candy) dessert.get(i)).getWeight();
 				str += getLb + "lbs @ ";
 				str += centsConversion(((Candy) dessert.get(i)).getPerPound());
 				str	+= "/lb\n";				
 				while(itemName.length() < maxReceiptWidth - itemPrice.length())
 					itemName += " "; // spaces out the receipt so prices will be aligned properly
-				str += itemName + itemPrice + "\n"; // adds the Candy name and price into the log
-			}
-			
-			else if (dessert.get(i) instanceof Cookie) // if current DessertItem in ArrayList is Cookie 
-			{		
+				str += itemName + itemPrice + "\n"; 	// adds the Candy name and price into the log
+			} else if (dessert.get(i) instanceof Cookie) {	// if current DessertItem in ArrayList is Cookie 		
 				int getAmt = ((Cookie)dessert.get(i)).getAmount();				
 				str += getAmt + "ct @ ";
 				str += centsConversion(((Cookie)dessert.get(i)).getPerDozen()) + "/dz\n";				
 				while(itemName.length() < maxReceiptWidth - itemPrice.length())
 					itemName += " "; // spaces out the receipt so prices will be aligned properly
 				str += itemName + itemPrice + "\n";  // adds the Cookie name and price into the log			
-			}	
-			
-			else if (dessert.get(i) instanceof Sundae) // if current DessertItem in ArrayList is Sundae
-			{
+			} else if (dessert.get(i) instanceof Sundae) { 	// if current DessertItem in ArrayList is Sundae
 				String getTopping = ((Sundae)dessert.get(i)).getTopName();
 				str += itemName + " w/\n";				
 				while(getTopping.length() < maxReceiptWidth - itemPrice.length())
 					getTopping += " ";  // spaces out the receipt so prices will be aligned properly
 				str += getTopping + itemPrice + "\n"; // adds the Sundae name, IceCream name, andd price into the log		
-			}
-			
-			else // if current DessertItem in ArrayList is IceCream
-			{	
+			} else { 	// if current DessertItem in ArrayList is IceCream
 				while(itemName.length() < maxReceiptWidth - itemPrice.length())
 					itemName += " "; // spaces out the receipt so prices will be aligned properly
 				str += itemName + itemPrice + "\n";  // adds the IceCream name and price into the log
@@ -108,20 +94,17 @@ public class Checkout
 		return str; // return log
 	}
 	
-	public String finalItems()
-	{
+	public String finalItems() {
 		String str = ""; // logging
 		String numberOfItems = "" + totalItems; // cast totalItems into String
-		str += "Number of Items:"; // adds to log
-				
+		str += "Number of Items:"; // adds to log	
 		while(str.length() < maxReceiptWidth - numberOfItems.length())
 			str += " "; // spaces out the receipt so values will be aligned properly
 		str += numberOfItems + "\n"; // adds the casted totalItems variable to the log 
 		return str; // return log
 	}
 	
-	public String subtotal()
-	{
+	public String subtotal() {
 		String str = ""; // logging
 		str = "Subtotal:";	
 		String cost = centsConversion(totalCost()); // implements conversion method to find final price before tax
@@ -131,8 +114,7 @@ public class Checkout
 		return str; // return log
 	}
 	
-	public String finalTax()
-	{
+	public String finalTax() {
 		String str = ""; // logging
 		str = "Tax:";		
 		String tax = centsConversion(totalTax()); // implements conversion method to find tax		
@@ -142,8 +124,7 @@ public class Checkout
 		return str; // return log
 	}
 	
-	public String finalCost()
-	{
+	public String finalCost() {
 		String str = ""; // logging
 		str = "Total Cost:"; 
 		String totalCost = centsConversion(totalCost() + totalTax()); // implements conversion method to find final price after tax
@@ -153,8 +134,7 @@ public class Checkout
 		return str;	// return log	
 	}
 	
-	public String toString() 
-	{
+	public String toString() {
 		String receipt = ""; // logging 
 		receipt += "------------------------------\n";
 		receipt += "        " + storeName + "\n"; // storeName = Sweets Heaven
