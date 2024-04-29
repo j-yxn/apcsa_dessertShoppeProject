@@ -1,12 +1,10 @@
-public abstract class DessertItem implements Comparable<DessertItem>
-{
+public abstract class DessertItem implements Comparable<DessertItem> {
 	 private String name;
-	 public DessertItem(String name) 
-	 {
+	 public DessertItem(String name) {
 		 // takes in the name of the DessertItem
 	 	 this.name = name;
 	 }
-	 
+	
 	 public abstract int getPrice(); 
 	 // abstract method getPrice(), prices are calcualated differently for all items
 
@@ -15,7 +13,7 @@ public abstract class DessertItem implements Comparable<DessertItem>
 		 return name;
 	 }
 	 
-	 public int compareTo(DessertItem other){
+	 public int compareTo(DessertItem other) {
 		 // Compares prices of current item with desired item
 		 if(this.getPrice() > other.getPrice())
 			 // if current price is numerically larger than the other, returns 1 (positive)
